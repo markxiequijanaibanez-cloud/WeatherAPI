@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WeatherCast | 5-Day Forecast</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+ 
+        <video id="bgMainDay" class="bg-video" autoplay muted loop playsinline>
+            <source src="lightmode/birdyday.mp4" type="video/mp4">
+        </video>
+
+            <video id="bgMainNight" class="bg-video" autoplay muted loop playsinline>
+                 <source src="rain/lightningstrikes.mp4" type="video/mp4">
+            </video>
+
+ 
+          <div class="overlay"></div>
+
+ 
+          <main class="weather-app">
+
+ 
+         <header class="app-header">
+                <h1>🌤 MSI WeatherCast</h1>
+                 <p>5-Day Weather Forecast</p>
+          </header>
+
+   
+    <section class="search-panel glass">
+      <div class="input-group">
+        <input
+          id="cityInput"
+          type="search"
+          placeholder="Search city..."
+          aria-label="City name"
+        />
+        <button id="searchBtn">Search</button>
+      </div>
+
+      <div class="option-group">
+        <select id="unitSelect" aria-label="Select units">
+          <option value="C">°C</option>
+          <option value="F">°F</option>
+        </select>
+
+        <button id="locBtn">ᯓ➤ location</button>
+        <button id="themeToggle" class="theme-btn" aria-pressed="false">
+          Off Night
+        </button>
+      </div>
+    </section>
+
+ 
+    <div id="status" class="status glass">
+      Enter a city or use your location
+    </div>
+
+ 
+    <section id="forecast" class="forecast-grid glass">
+    
+      <div class="card sunny">
+        <div class="date">Mon</div>
+        <div class="icon sun"></div>
+        <div class="temps">
+          <span class="temp-max">30°C</span>
+          <span class="temp-min">24°C</span>
+        </div>
+        <div class="extras">
+          <span class="wind"><span class="wind-arrow"></span> 12 km/h</span>
+          <span>💧 68%</span>
+        </div>
+      </div>
+      <div class="card rainy">
+        <div class="date">Tue</div>
+        <div class="icon rain"></div>
+        <div class="temps">
+          <span class="temp-max">22°C</span>
+          <span class="temp-min">18°C</span>
+        </div>
+        <div class="extras">
+          <span class="wind"><span class="wind-arrow"></span> 20 km/h</span>
+          <span>💧 85%</span>
+        </div>
+      </div>
+    </section>
+
+ 
+    <footer class="app-footer">
+      <span>Powered by OpenWeatherMap</span>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
